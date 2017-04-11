@@ -11,7 +11,7 @@ export default class Confetti extends Component {
     this.setRef = this.setRef.bind(this);
   }
 
-  componentWillRecieveProps(nextProps) {
+  componentWillReceiveProps(nextProps) {
     if (nextProps.show && !this.props.show) {
       confetti(this.container, nextProps.config);
     }
