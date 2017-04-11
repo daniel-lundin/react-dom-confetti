@@ -1,0 +1,29 @@
+{
+  "name": "react-confetti",
+  "version": "0.0.1",
+  "description": "react component for dom-confetti",
+  "main": "lib/main.js",
+  "keywords": [
+    "dom-confetti"
+  ],
+  "author": "d-dog@d-dog.se",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "*"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "react": "^15.5.4"
+  },
+  "dependencies": {
+    "dom-confetti": "0.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "npm run build",
+    "build": "babel src --out-dir lib"
+  }
+}
