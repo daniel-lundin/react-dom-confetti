@@ -21,6 +21,11 @@
   "dependencies": {
     "dom-confetti": "0.0.1"
   },
+  "files": [
+    "src",
+    "lib",
+    "package.json"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublish": "npm run build",
