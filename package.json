@@ -2,7 +2,7 @@
   "name": "react-dom-confetti",
   "version": "0.0.1",
   "description": "react component for dom-confetti",
-  "main": "lib/main.js",
+  "main": "lib/confetti.js",
   "keywords": [
     "dom-confetti"
   ],
@@ -19,7 +19,7 @@
     "react": "^15.5.4"
   },
   "dependencies": {
-    "dom-confetti": "0.0.1"
+    "dom-confetti": "0.0.2"
   },
   "files": [
     "src",
