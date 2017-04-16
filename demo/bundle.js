@@ -9673,6 +9673,11 @@ var App = function (_Component) {
             null,
             'Code'
           ),
+          _react2.default.createElement(
+            'p',
+            null,
+            'The confetti will trigger whenever the prop active goes from falsy to truthhy.'
+          ),
           _react2.default.createElement(_code2.default, { settings: settings })
         )
       );
@@ -9738,7 +9743,7 @@ exports.default = function (_ref) {
     },
     _react2.default.createElement(_confetti2.default, {
       className: 'loading-button__confetti',
-      show: !isLoading,
+      active: !isLoading,
       config: confettiConfig
     }),
     isLoading ? 'Loading...' : 'Hit me!'
@@ -22324,7 +22329,7 @@ var Confetti = function (_Component) {
   _createClass(Confetti, [{
     key: 'componentWillReceiveProps',
     value: function componentWillReceiveProps(nextProps) {
-      if (nextProps.show && !this.props.show) {
+      if (nextProps.active && !this.props.active) {
         (0, _domConfetti.confetti)(this.container, nextProps.config);
       }
     }
@@ -22634,7 +22639,7 @@ exports.default = function (_ref) {
   }).join(',\n');
   var importStmt = 'import Confetti from \'react-dom-confetti\';\n\n';
   var config = 'const config = {\n' + innerConfig + '\n};\n';
-  var codeString = 'return <Confetti show={ someProp } config={ config }/>';
+  var codeString = 'return <Confetti active={ someProp } config={ config }/>';
   return _react2.default.createElement(
     'pre',
     null,

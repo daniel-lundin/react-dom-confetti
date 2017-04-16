@@ -12,7 +12,7 @@ export default class Confetti extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.show && !this.props.show) {
+    if (nextProps.active && !this.props.active) {
       confetti(this.container, nextProps.config);
     }
   }

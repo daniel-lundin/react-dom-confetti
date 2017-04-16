@@ -6,12 +6,6 @@ body {
   margin: 0;
 }
 
-header {
-  background-color: #313131;
-  color: #eee;
-  overflow: auto;
-}
-
 h1, h2, p {
   text-align: center;
 }
@@ -21,7 +15,7 @@ h1, h2 {
 }
 
 pre {
-  max-width: 400px;
+  max-width: 550px;
   margin: 0 auto;
   border-left: 3px solid #33C3F0;
   padding-left: 8px;
@@ -29,11 +23,12 @@ pre {
 }
 
 
-.app {
+.container {
+  max-width: 550px;
 }
 
 .app__settings {
-  max-width: 400px;
+  max-width: 550px;
   margin: 0 auto;
 }
 
@@ -69,5 +64,5 @@ pre {
 }
 
 .setting__value {
-  margin-left: 5p;x
+  margin-left: 5px;
 }

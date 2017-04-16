@@ -16,7 +16,7 @@ export default ({ confettiConfig, isLoading, setLoading }) => {
     >
       <Confetti
         className="loading-button__confetti"
-        show={ !isLoading }
+        active={ !isLoading }
         config={ confettiConfig }
       />
 
