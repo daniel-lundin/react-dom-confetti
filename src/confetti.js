@@ -22,6 +22,6 @@ export default class Confetti extends Component {
   }
 
   render() {
-    return <div style={ style } ref={ this.setRef } />;
+    return <div className={ this.props.className } style={ style } ref={ this.setRef } />;
   }
 }

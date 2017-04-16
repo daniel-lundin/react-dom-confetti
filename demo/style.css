@@ -1,0 +1,73 @@
+html, body, button {
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background-color: #313131;
+  color: #eee;
+  overflow: auto;
+}
+
+h1, h2, p {
+  text-align: center;
+}
+
+h1, h2 {
+  margin: 2vh;
+}
+
+pre {
+  max-width: 400px;
+  margin: 0 auto;
+  border-left: 3px solid #33C3F0;
+  padding-left: 8px;
+  box-sizing: border-box;
+}
+
+
+.app {
+}
+
+.app__settings {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.app__confetti {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-button {
+  position: relative;
+  font-size: 2rem;
+  width: 250px;
+  height: 60px;
+}
+
+.loading-button__confetti {
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+}
+
+.setting {
+}
+
+.setting__slider-container {
+  display: flex;
+}
+
+.setting__slider {
+  flex: 1
+}
+
+.setting__value {
+  margin-left: 5p;x
+}
