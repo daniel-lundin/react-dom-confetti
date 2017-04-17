@@ -31,8 +31,6 @@ export default class App extends Component {
   }
 
   updateValue(prop, evt) {
-    console.log(evt);
-    console.log(evt.target.value);
     const value = evt.target.value;
     this.setState((prevState) => ({
       settings: Object.assign({}, prevState.settings, { [prop]: value })
@@ -71,7 +69,7 @@ export default class App extends Component {
         <div className="app__settings settings">
           <h2>Confetti settings</h2>
           <div>
-            { settingSliders } 
+            { settingSliders }
           </div>
         </div>
 				<div className="app__confetti">
