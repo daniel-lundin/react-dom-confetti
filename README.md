@@ -8,7 +8,7 @@ Trigger confetti explosions on state transitions:
 import Confetti from 'react-dom-confetti';
 
 // in render
-<Confetti active={ this.props.completed />
+<Confetti active={ this.props.completed } />
 ```
 
 This will trigger a confetti explision every time the prop `active` goes from a falsy to truthy value.
