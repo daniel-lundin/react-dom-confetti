@@ -1,6 +1,6 @@
 {
   "name": "react-dom-confetti",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "react component for dom-confetti",
   "main": "lib/confetti.js",
   "keywords": [
@@ -31,6 +31,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublish": "npm run build",
+    "postpublish": "npm run gh-pages",
     "build": "babel src --out-dir lib",
     "build:demo": "webpack --config webpack.demo.config.js",
     "gh-pages": "npm run build:demo -- -p && gh-pages -d demo"
