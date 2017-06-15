@@ -1,5 +1,5 @@
 {
-  "name": "react-dom-confetti",
+  "name": "@wongterrencew/react-dom-confetti",
   "version": "0.0.7",
   "description": "react component for dom-confetti",
   "main": "lib/confetti.js",
@@ -25,9 +25,7 @@
     "react-tap-event-plugin": "^2.0.1",
     "webpack": "^2.3.3"
   },
-  "dependencies": {
-    "dom-confetti": "0.0.6"
-  },
+  "dependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublish": "npm run build",

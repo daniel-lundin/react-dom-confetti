@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { confetti } from 'dom-confetti';
+import { confetti } from './dom-confetti';
 
 const style = {
   position: 'relative'
