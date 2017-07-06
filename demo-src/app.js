@@ -81,7 +81,7 @@ export default class App extends Component {
 				</div>
         <div className="app__code">
           <h2>Code</h2>
-          <p>The confetti will trigger whenever the prop active goes from falsy to truthhy.</p>
+          <p>The confetti will trigger whenever the prop active goes from falsy to truthy.</p>
           <Code settings={ settings }></Code>
         </div>
       </div>
