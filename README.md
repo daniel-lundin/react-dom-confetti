@@ -11,26 +11,26 @@ import Confetti from 'react-dom-confetti';
 <Confetti active={ this.props.completed } />
 ```
 
-This will trigger a confetti explision every time the prop `active` goes from a falsy to truthy value.
+This component will trigger a confetti explosion every time the prop `active` goes from a falsy to truthy value.
 
 ## Demo
 [https://daniel-lundin.github.io/react-dom-confetti/](https://daniel-lundin.github.io/react-dom-confetti/)
 
 ## Why?
-Slow operations annoy users and stakeholders. We have two options, either optimize slow operations or **make it worth the wait**. This library focus on the latter.
+Slow operations annoy users and stakeholders. We have two options, either optimize slow operations or **make it worth the wait**. This library focuses on the latter.
 
 ### Props
 
 #### active
 
-Required. Triggers an explosion when transitions from falsy to truthy.
+Required. Triggers an explosion when the prop transitions from falsy to truthy.
 
 #### config
 
 Optional. Configuration object to control the characteristics of the confetti:
 
 - `angle` - direction of the explosion in degrees, defaults to 90.
-- `spread` - spread of the explosion in degrees,  deafults to 45.
+- `spread` - spread of the explosion in degrees,  defaults to 45.
 - `startVelocity` - Initial velocity of the particles, defaults to 45.
 - `elementCount` - Number of particle elements, default to 50.
 - `decay` - Decrease in velocity per frame, defaults to 0.9
