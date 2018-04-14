@@ -5,10 +5,10 @@ import Code from './code.js';
 
 const SETTINGS = [
   ['angle', 90, 0, 360, 1],
-  ['spread', 60, 0, 360, 1],
-  ['startVelocity', 20, 1, 100, 1],
-  ['elementCount', 40, 5, 200, 1],
-  ['decay', 0.95, 0.1, 1, 0.01]
+  ['spread', 45, 0, 360, 1],
+  ['startVelocity', 45, 1, 100, 1],
+  ['elementCount', 50, 5, 200, 1],
+  ['decay', 0.9, 0.1, 1, 0.01]
 ];
 
 export default class App extends Component {
