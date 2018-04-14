@@ -1,6 +1,6 @@
 {
   "name": "react-dom-confetti",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "react component for dom-confetti",
   "main": "lib/confetti.js",
   "keywords": [
