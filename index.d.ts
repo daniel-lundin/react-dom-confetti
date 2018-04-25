@@ -6,6 +6,7 @@ interface ConfettiConfig {
     startVelocity?: number;
     elementCount?: number;
     decay?: number;
+    colors: string[];
 }
 
 interface ConfettiProps {
