@@ -1,6 +1,6 @@
 {
   "name": "react-dom-confetti",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "react component for dom-confetti",
   "main": "lib/confetti.js",
   "keywords": [
@@ -26,7 +26,7 @@
     "webpack": "^2.3.3"
   },
   "dependencies": {
-    "dom-confetti": "~0.0.7"
+    "dom-confetti": "~0.0.11"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
