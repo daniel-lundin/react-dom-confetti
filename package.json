@@ -1,6 +1,6 @@
 {
   "name": "react-dom-confetti",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "react component for dom-confetti",
   "main": "lib/confetti.js",
   "keywords": [
@@ -19,14 +19,13 @@
     "babel-preset-es2015": "^6.24.1",
     "eslint": "^3.19.0",
     "gh-pages": "^0.12.0",
-    "material-ui": "^0.17.3",
     "react": "^15.5.4",
+    "react-color": "^2.17.0",
     "react-dom": "^15.5.4",
-    "react-tap-event-plugin": "^2.0.1",
     "webpack": "^2.3.3"
   },
   "dependencies": {
-    "dom-confetti": "~0.0.11"
+    "dom-confetti": "~0.0.13"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

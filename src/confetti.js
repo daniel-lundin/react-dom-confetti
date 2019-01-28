@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { confetti } from 'dom-confetti';
+import React, { Component } from "react";
+import { confetti } from "dom-confetti";
 
 const style = {
-  position: 'relative'
+  position: "relative"
 };
 
 export default class Confetti extends Component {
@@ -22,6 +22,8 @@ export default class Confetti extends Component {
   }
 
   render() {
-    return <div className={ this.props.className } style={ style } ref={ this.setRef } />;
+    return (
+      <div className={this.props.className} style={style} ref={this.setRef} />
+    );
   }
 }
