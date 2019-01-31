@@ -66,3 +66,7 @@ pre {
 .setting__value {
   margin-left: 5px;
 }
+
+input[type="radio"] {
+  margin-right: 10px;
+}

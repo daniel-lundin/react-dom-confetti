@@ -10,9 +10,18 @@ const SETTINGS = [
   ["spread", 45, 0, 360, 1, identity, identity],
   ["startVelocity", 45, 1, 100, 1, identity, identity],
   ["elementCount", 50, 5, 200, 1, identity, identity],
-  ["decay", 0.9, 0.1, 1, 0.01, identity, identity],
+  ["dragFriction", 0.1, 0.01, 1, 0.02, identity, identity],
+  ["duration", 3000, 100, 10000, 10, identity, identity],
+  ["delay", 0, 0, 50, 1, identity, identity],
   ["width", "10px", 1, 100, 1, value => `${value}px`, stripPixels],
   ["height", "10px", 1, 100, 1, value => `${value}px`, stripPixels]
+];
+
+const colorPresets = [
+  ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
+  ["#000", "#333", "#666"],
+  ["#000", "#f00"],
+  ["#f00", "#0f0", "#00f"]
 ];
 
 export default class App extends Component {
@@ -30,7 +39,8 @@ export default class App extends Component {
             [curr[0]]: curr[1]
           }),
         {}
-      )
+      ),
+      colorPreset: 0
     };
   }
 
@@ -70,20 +80,65 @@ export default class App extends Component {
   }
 
   render() {
-    const { settings, isLoading } = this.state;
+    const { settings, colorPreset, isLoading } = this.state;
     const colors = settings["colors"];
+    const allSettings = Object.assign({}, settings, {
+      colors: colorPresets[colorPreset]
+    });
+    console.log(allSettings);
     const settingSliders = this.renderSettingSliders();
     return (
       <div className="app">
         <div className="app__settings settings">
           <h2>Confetti settings</h2>
           <div>{settingSliders}</div>
+          <div>
+            <form>
+              <legend>Color presets</legend>
+              <label>
+                <input
+                  name="color-preset"
+                  type="radio"
+                  checked={colorPreset === 0}
+                  onChange={() => this.setState({ colorPreset: 0 })}
+                />
+                Celebration
+              </label>
+              <label>
+                <input
+                  name="color-preset"
+                  type="radio"
+                  checked={colorPreset === 1}
+                  onChange={() => this.setState({ colorPreset: 1 })}
+                />
+                Monochrome
+              </label>
+              <label>
+                <input
+                  name="color-preset"
+                  type="radio"
+                  checked={colorPreset === 2}
+                  onChange={() => this.setState({ colorPreset: 2 })}
+                />
+                Poker
+              </label>
+              <label>
+                <input
+                  name="color-preset"
+                  type="radio"
+                  checked={colorPreset === 3}
+                  onChange={() => this.setState({ colorPreset: 3 })}
+                />
+                RGB
+              </label>
+            </form>
+          </div>
         </div>
         <div className="app__confetti">
           <LoadingButton
             isLoading={isLoading}
             setLoading={this.setLoading}
-            confettiConfig={settings}
+            confettiConfig={allSettings}
           />
         </div>
         <div className="app__code">
@@ -92,7 +147,7 @@ export default class App extends Component {
             The confetti will trigger whenever the prop active goes from falsy
             to truthy.
           </p>
-          <Code settings={settings} />
+          <Code settings={allSettings} />
         </div>
       </div>
     );

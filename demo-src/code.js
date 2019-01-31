@@ -1,15 +1,18 @@
 import React from "react";
 
-function maybeQuote(s) {
+function prettyPrint(s) {
   if (typeof s === "string") {
     return `"${s}"`;
+  }
+  if (Array.isArray(s)) {
+    return `[${s.map(prettyPrint).join(", ")}]`;
   }
   return s;
 }
 export default ({ settings }) => {
   const innerConfig = Object.keys(settings)
     .map(key => {
-      return `  ${key}: ${maybeQuote(settings[key])}`;
+      return `  ${key}: ${prettyPrint(settings[key])}`;
     })
     .join(",\n");
   const importStmt = `import Confetti from 'react-dom-confetti';\n\n`;
