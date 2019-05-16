@@ -1,6 +1,6 @@
 {
   "name": "react-dom-confetti",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "react component for dom-confetti",
   "main": "lib/confetti.js",
   "keywords": [
@@ -8,6 +8,10 @@
   ],
   "author": "d-dog@d-dog.se",
   "license": "MIT",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/daniel-lundin/react-dom-confetti.git"
+  },
   "peerDependencies": {
     "react": "*"
   },
@@ -25,7 +29,7 @@
     "webpack": "^2.3.3"
   },
   "dependencies": {
-    "dom-confetti": "0.1.0"
+    "dom-confetti": "0.1.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

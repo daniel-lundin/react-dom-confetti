@@ -12,7 +12,7 @@ const SETTINGS = [
   ["elementCount", 50, 5, 200, 1, identity, identity],
   ["dragFriction", 0.1, 0.01, 1, 0.02, identity, identity],
   ["duration", 3000, 100, 10000, 10, identity, identity],
-  ["delay", 0, 0, 50, 1, identity, identity],
+  ["stagger", 0, 0, 50, 1, identity, identity],
   ["width", "10px", 1, 100, 1, value => `${value}px`, stripPixels],
   ["height", "10px", 1, 100, 1, value => `${value}px`, stripPixels]
 ];
@@ -85,7 +85,6 @@ export default class App extends Component {
     const allSettings = Object.assign({}, settings, {
       colors: colorPresets[colorPreset]
     });
-    console.log(allSettings);
     const settingSliders = this.renderSettingSliders();
     return (
       <div className="app">

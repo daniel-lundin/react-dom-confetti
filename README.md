@@ -37,7 +37,8 @@ Optional. Configuration object to control the characteristics of the confetti:
 - `elementCount` - Number of particle elements, defaults to 50.
 - `decay` - *deprecated* - Decrease in velocity per frame, defaults to 0.9 (Use of this will disable dragFriction)
 - `dragFriction` - Decrease in velocity proportional to current velocity, default to 0.1
-- `delay` - Delay for each fetti in milliseconds, defaults to 0.
+- `delay` - *deprecated* Use stagger instead.
+- `stagger` - Delay for each fetti in milliseconds, defaults to 0.
 - `random` - Randomization function, defaults to Math.random
 - `colors` - An array of color codes, defaults to `['#a864fd', '#29cdff', '#78ff44', '#ff718d' '#fdff6a']`
 
