@@ -3,10 +3,16 @@ import * as React from 'react';
 interface ConfettiConfig {
     angle?: number;
     spread?: number;
+    width?: number;
+    height?: number;
+    duration?: number;
+    dragFriction?: number;
+    stagger?: number;
     startVelocity?: number;
     elementCount?: number;
     decay?: number;
     colors?: string[];
+    random?: () => number;
 }
 
 interface ConfettiProps {
