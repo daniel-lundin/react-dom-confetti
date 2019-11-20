@@ -1,11 +1,15 @@
 import * as React from 'react';
 
 interface ConfettiConfig {
-    angle?: number;
-    spread?: number;
-    startVelocity?: number;
+    angle?: string;
+    spread?: string;
+    startVelocity?: string;
     elementCount?: number;
-    decay?: number;
+    dragFriction?: number;
+    duration?: string;
+    stagger?: string;
+    width?: string;
+    height?: string;
     colors?: string[];
 }
 
