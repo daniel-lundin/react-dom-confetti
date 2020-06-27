@@ -3,8 +3,8 @@ import * as React from 'react';
 interface ConfettiConfig {
     angle?: number;
     spread?: number;
-    width?: number;
-    height?: number;
+    width?: string;
+    height?: string;
     duration?: number;
     dragFriction?: number;
     stagger?: number;
