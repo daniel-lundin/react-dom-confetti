@@ -7,14 +7,15 @@ const identity = x => x;
 const stripPixels = x => parseInt(x.replace("px", ""), 10);
 const SETTINGS = [
   ["angle", 90, 0, 360, 1, identity, identity],
-  ["spread", 45, 0, 360, 1, identity, identity],
-  ["startVelocity", 45, 1, 100, 1, identity, identity],
-  ["elementCount", 50, 5, 200, 1, identity, identity],
-  ["dragFriction", 0.1, 0.01, 1, 0.02, identity, identity],
+  ["spread", 360, 0, 360, 1, identity, identity],
+  ["startVelocity", 40, 1, 100, 1, identity, identity],
+  ["elementCount", 70, 5, 200, 1, identity, identity],
+  ["dragFriction", 0.12, 0.01, 1, 0.02, identity, identity],
   ["duration", 3000, 100, 10000, 10, identity, identity],
-  ["stagger", 0, 0, 50, 1, identity, identity],
+  ["stagger", 3, 0, 50, 1, identity, identity],
   ["width", "10px", 1, 100, 1, value => `${value}px`, stripPixels],
-  ["height", "10px", 1, 100, 1, value => `${value}px`, stripPixels]
+  ["height", "10px", 1, 100, 1, value => `${value}px`, stripPixels],
+  ["perspective", "500px", 0, 1000, 1, value => `${value}px`, stripPixels]
 ];
 
 const colorPresets = [
