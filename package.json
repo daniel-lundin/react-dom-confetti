@@ -21,7 +21,7 @@
     "babel-loader": "^6.4.1",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
-    "eslint": "^3.19.0",
+    "eslint": "^4.18.2",
     "gh-pages": "^0.12.0",
     "react": "^15.5.4",
     "react-color": "^2.17.0",
