@@ -25,6 +25,11 @@ const colorPresets = [
   ["#f00", "#0f0", "#00f"]
 ];
 
+const imagePresets = [
+  "./btc.svg",
+  "./cash.svg"
+];
+
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -41,7 +46,8 @@ export default class App extends Component {
           }),
         {}
       ),
-      colorPreset: 0
+      colorPreset: 0,
+      imagePreset: ""
     };
   }
 
@@ -81,12 +87,28 @@ export default class App extends Component {
   }
 
   render() {
-    const { settings, colorPreset, isLoading } = this.state;
+    const { settings, colorPreset, imagePreset, isLoading } = this.state;
     const colors = settings["colors"];
     const allSettings = Object.assign({}, settings, {
-      colors: colorPresets[colorPreset]
+      colors: colorPresets[colorPreset],
+      image: (imagePreset !== "" && imagePresets[imagePreset]) || ""
     });
     const settingSliders = this.renderSettingSliders();
+    const imageStyle = {
+      label: {
+        "display": "flex",
+        "align-items": "center"
+      },
+      radio: {
+        "margin-bottom": 0
+      },
+      img: {
+        "width": settings.width,
+        "height": settings.height,
+        "margin-left": "8px",
+        "margin-right": "8px"
+      }
+    };
     return (
       <div className="app">
         <div className="app__settings settings">
@@ -99,8 +121,8 @@ export default class App extends Component {
                 <input
                   name="color-preset"
                   type="radio"
-                  checked={colorPreset === 0}
-                  onChange={() => this.setState({ colorPreset: 0 })}
+                  checked={imagePreset === "" && colorPreset === 0}
+                  onChange={() => this.setState({ colorPreset: 0, imagePreset: "" })}
                 />
                 Celebration
               </label>
@@ -108,8 +130,8 @@ export default class App extends Component {
                 <input
                   name="color-preset"
                   type="radio"
-                  checked={colorPreset === 1}
-                  onChange={() => this.setState({ colorPreset: 1 })}
+                  checked={imagePreset === "" && colorPreset === 1}
+                  onChange={() => this.setState({ colorPreset: 1, imagePreset: "" })}
                 />
                 Monochrome
               </label>
@@ -117,8 +139,8 @@ export default class App extends Component {
                 <input
                   name="color-preset"
                   type="radio"
-                  checked={colorPreset === 2}
-                  onChange={() => this.setState({ colorPreset: 2 })}
+                  checked={imagePreset === "" && colorPreset === 2}
+                  onChange={() => this.setState({ colorPreset: 2, imagePreset: "" })}
                 />
                 Poker
               </label>
@@ -126,10 +148,31 @@ export default class App extends Component {
                 <input
                   name="color-preset"
                   type="radio"
-                  checked={colorPreset === 3}
-                  onChange={() => this.setState({ colorPreset: 3 })}
+                  checked={imagePreset === "" && colorPreset === 3}
+                  onChange={() => this.setState({ colorPreset: 3, imagePreset: "" })}
                 />
                 RGB
+              </label>
+              <legend>Image presets</legend>
+              <label style={imageStyle.label}>
+                <input
+                  name="color-preset"
+                  type="radio"
+                  style={imageStyle.radio}
+                  checked={imagePreset === 0}
+                  onChange={() => this.setState({ imagePreset: 0 })}
+                />
+                Sample 1 <img src={imagePresets[0]} style={imageStyle.img} />
+              </label>
+              <label style={imageStyle.label}>
+                <input
+                  name="color-preset"
+                  type="radio"
+                  style={imageStyle.radio}
+                  checked={imagePreset === 1}
+                  onChange={() => this.setState({ imagePreset: 1 })}
+                />
+                Sample 2 <img src={imagePresets[1]} style={imageStyle.img} />
               </label>
             </form>
           </div>
