@@ -12,6 +12,7 @@ interface ConfettiConfig {
     elementCount?: number;
     decay?: number;
     colors?: string[];
+    image?: string;
     random?: () => number;
 }
 

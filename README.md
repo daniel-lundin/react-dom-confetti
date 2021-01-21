@@ -41,5 +41,6 @@ Optional. Configuration object to control the characteristics of the confetti:
 - `stagger` - Delay for each fetti in milliseconds, defaults to 0.
 - `random` - Randomization function, defaults to Math.random
 - `colors` - An array of color codes, defaults to `['#a864fd', '#29cdff', '#78ff44', '#ff718d' '#fdff6a']`
+- `image` - Replace colors with an image instead (absolute or relative url).
 
 License MIT, copyright [Daniel Lundin](https://www.twitter.com/daniel-lundin) 2017
