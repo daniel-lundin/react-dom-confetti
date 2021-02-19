@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { CSSProperties } from 'react';
 
 interface ConfettiConfig {
     angle?: number;
@@ -18,6 +18,8 @@ interface ConfettiConfig {
 interface ConfettiProps {
     active: boolean;
     config?: ConfettiConfig;
+    className?:string;
+    style?: CSSProperties;
 }
 
 export default class Confetti extends React.Component<ConfettiProps, any> {
